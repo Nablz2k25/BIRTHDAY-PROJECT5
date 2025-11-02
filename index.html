@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tryas's 18th Birthday Diary 💙</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Cormorant+Garamond:wght@500&family=Special+Elite&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="balloon-container">
+  <div class="balloon"></div>
+  <div class="balloon"></div>
+  <div class="balloon"></div>
+</div>
+
+<div class="book">
+
+<!-- PAGE 1 — COVER -->
+<section class="page cover">
+  <h1>Tryas's 18th Birthday Diary 💙</h1>
+  <p class="subtitle">Every page holds a memory<br>Every year holds a story</p>
+  <button class="open-btn" onclick="nextPage()">Open Diary</button>
+</section>
+
+<!-- PAGE 2 — QUOTES -->
+<section class="page">
+  <h2 class="title-script">for the girl growing up…</h2>
+  <p class="quote">"At eighteen, we are old enough to know who we are, and young enough to become whoever we choose."</p>
+  <span class="quote-author">— Unknown</span>
+  <button class="nav next" onclick="nextPage()">Next ▶</button>
+</section>
+
+<!-- PAGE 3 — WISHES -->
+<section class="page">
+  <h2 class="title-script">write for your future self 💌</h2>
+  <textarea id="diary"></textarea>
+  <div class="btn-row">
+    <button onclick="undoText()">Undo</button>
+    <button onclick="clearText()">Clear</button>
+    <button onclick="saveNote()">Save</button>
+  </div>
+  <button class="nav next" onclick="nextPage()">Next ▶</button>
+</section>
+
+<!-- PAGE 4 — MY MESSAGE -->
+<section class="page">
+  <h2 class="title-script">from me 🤍</h2>
+  <p class="msg">
+    aku bukan anak word of affirmation jadi maafin ini ngga bisa bikin kata kata hehe.<br><br>
+    tapi jujur… perjalanan hidup kita dari jaman bocil kematian ke remaja yang mulai dewasa dan penuh intrik ini
+    ga akan pernah bisa diungkapin sama kata kata apa pun.<br><br>
+    salah satu hal yang selalu bikin aku ketawa, sedih, haru, dan kadang tercengang ya… kalo inget kita dulu 🤣<br><br>
+    semoga pertemanan kita ini bisa jadi salah satu kado terbaik di ulang tahun kita ya.<br><br>
+    생일 축하해 🥳
+  </p>
+  <button class="nav next" onclick="nextPage()">Next ▶</button>
+</section>
+
+<!-- PAGE 5 — ENDING -->
+<section class="page end">
+  <div class="envelope" onclick="openLetter()">
+    <p class="small">tap to open 💌</p>
+  </div>
+  <div class="letter" id="letter">
+    <p>Thank you for growing up with me 💙</p>
+  </div>
+</section>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
