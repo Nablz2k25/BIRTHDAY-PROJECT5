@@ -1,0 +1,145 @@
+body {
+  background: #dfefff;
+  font-family: "Cormorant Garamond", serif;
+  overflow: hidden;
+}
+
+/* Book */
+.book {
+  width: 90vw;
+  height: 90vh;
+  margin: auto;
+  display: flex;
+  position: relative;
+  perspective: 2000px;
+}
+
+/* Pages */
+.page {
+  background: #f9fbff;
+  width: 100%;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.15);
+  position: absolute;
+  transform-origin: left;
+  transition: transform .9s ease;
+  backface-visibility: hidden;
+}
+
+/* Cover */
+.cover {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.cover h1 {
+  font-family: "Dancing Script", cursive;
+  font-size: 3rem;
+}
+.subtitle { opacity: .7; }
+.open-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  background: white;
+}
+
+/* Text styles */
+.title-script {
+  font-family: "Dancing Script", cursive;
+  font-size: 2rem;
+  text-align: center;
+}
+.quote {
+  font-family: "Special Elite", monospace;
+  font-size: 1.2rem;
+  padding: 20px;
+  background: #ffffffcc;
+  border-radius: 10px;
+  text-align: center;
+}
+.quote-author {
+  display: block;
+  text-align: right;
+  font-size: .9rem;
+  opacity: .6;
+}
+
+/* Diary writing area */
+textarea {
+  width: 100%;
+  height: 50vh;
+  border: none;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  font-family: "Cormorant Garamond";
+  font-size: 1.1rem;
+  line-height: 1.6rem;
+  background-image: repeating-linear-gradient(#fff, #fff 25px, #bcd8ff 26px);
+}
+.btn-row button {
+  margin: 5px;
+  padding: 8px 15px;
+}
+
+/* Balloons */
+.balloon-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+.balloon {
+  width: 30px; height: 45px;
+  background: #8ab7ff;
+  border-radius: 50% 50% 45% 45%;
+  position: absolute;
+  animation: float 8s infinite ease-in-out;
+  opacity: .7;
+}
+.balloon:nth-child(1) { left: 20%; animation-delay: 0s; }
+.balloon:nth-child(2) { left: 50%; animation-delay: 2s; }
+.balloon:nth-child(3) { left: 80%; animation-delay: 4s; }
+
+@keyframes float {
+  0% {transform: translateY(20vh);}
+  100% {transform: translateY(-120vh);}
+}
+
+/* Envelope & letter */
+.envelope {
+  width: 200px; height: 120px;
+  background: white;
+  margin: auto;
+  margin-top: 20vh;
+  border-radius: 8px;
+  position: relative;
+  cursor: pointer;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+.small { text-align: center; opacity: .6; margin-top: 5px; }
+
+.letter {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%,-50%) scale(0);
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  transition: .6s;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+.letter.open { transform: translate(-50%,-50%) scale(1); }
+
+/* Navigation */
+.nav {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
